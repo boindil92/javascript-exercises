@@ -1,17 +1,15 @@
-const reverseString = function(string) {
+function reverseString(text){
+    
+    let charArray=text.split("");
 
-    let counter=string.length;
-    let newstring;
+    let arrayReverse= charArray.reverse();
 
-    for (i=counter;i>0;i--) {
-       let piece= string.slice(i);
+    
+    let reverseText=arrayReverse.join('');
+    return reverseText;
+    
 
-       newstring=newstring+piece;
-
-    }
-    return newstring;
-
-};
+} 
 
 // Do not edit below this line
 module.exports = reverseString;
