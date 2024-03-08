@@ -1,18 +1,27 @@
-const removeFromArray = function(array,ar) {
+const removeFromArray = function(array,...disc) {
 
     let i=0;
-    let newArray=[];
+    let e=0;
 
-    while (i<array.length) {
+    let newDisc=[disc];   //crea array con i numeri da scartare per compararli
+    let newArray=[];      //crea array da riempire con i risultati della comparazione
 
-        if (array[i] != ar){
-        newArray.push(array[i]);
-        }
-        
+    while (e<newDisc.length) {
+        while (i<array.length) {
+
+            if (array[i] != newDisc[e]){
+            newArray.push(array[i]);
+            }
+            
         i++;
+        }
+    e++
     }
-
     return newArray;
+// il problema è che cosi' al secondo giro del primo loop reinserisco tutti i valori,
+//anche quelli scartati al primo giro... funziona solo se ho un parametro solo...
+
+
 
 };
 
