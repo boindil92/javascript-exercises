@@ -1,14 +1,20 @@
 const sumAll = function(a,b) {
 
-    let c=(Math.abs(a-b)+1);
+    // let c=(Math.abs(a-b)+1);  apparently math doesn't work for big int.
+    
     let d=0;
     
-
-    for (let i=0;i<c;i++){
-
-       d=(d+(a+i))
-
+    if (a>=b) {
+        c=(a-b)+1
+    } else {
+        c=(b-a)+1
     }
+
+     for (let i=0;i<c;i++){
+
+           d=(d+(a+i))
+
+        }
 
     return d;
 
