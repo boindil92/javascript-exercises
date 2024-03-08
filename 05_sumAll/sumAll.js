@@ -6,15 +6,23 @@ const sumAll = function(a,b) {
     
     if (a>=b) {
         c=(a-b)+1
+        for (let i=0;i<c;i++){
+
+            d=(d+(b+i))
+ 
+         }
+
+
     } else {
         c=(b-a)+1
+        for (let i=0;i<c;i++){
+
+            d=(d+(a+i))
+ 
+         }
     }
 
-     for (let i=0;i<c;i++){
 
-           d=(d+(a+i))
-
-        }
 
     return d;
 
