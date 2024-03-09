@@ -4,10 +4,13 @@ const sumAll = function(a,b) {
     
     let d=0;
 
-    
-    
-    if (a>=b) {
-        c=(a-b)+1
+
+    if ((typeof a!= "number")||(typeof b!= "number")||b<0||a<0) {
+
+            d='ERROR';
+
+    } else if (a>=b) {
+        c=(a-b)+1;
         for (let i=0;i<c;i++){
 
             d=(d+(b+i))
@@ -16,7 +19,9 @@ const sumAll = function(a,b) {
 
 
     } else {
-        c=(b-a)+1
+
+        c=(b-a)+1;
+        
         for (let i=0;i<c;i++){
 
             d=(d+(a+i))
@@ -25,14 +30,6 @@ const sumAll = function(a,b) {
     }
 
 
-
-    if (d<0) { 
-        d='ERROR';
-    } else if (isNaN(d)) {
-        d='ERROR';  
-    } else {
-        d=d;
-    }
 
     return d;
 
